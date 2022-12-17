@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player/CameraPivot.gd" type="Script" id=1]
+[ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/Player.gd" type="Script" id=3]
+[ext_resource path="res://Player/Model/fox.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CylinderShape" id=5]
+height = 1.2
+radius = 0.5
+
+[sub_resource type="BoxShape" id=4]
+
+[node name="Player" type="KinematicBody"]
+collision_mask = 8
+script = ExtResource( 3 )
+speed = 50
+jump_power = 5
+acceleration = 100.0
+deceleration = 100.0
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0 )
+shape = SubResource( 5 )
+
+[node name="fox" parent="." instance=ExtResource( 4 )]
+
+[node name="CameraPivot" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0 )
+script = ExtResource( 1 )
+sensitivity = 7
+max_angle = 70.0
+
+[node name="Camera" type="Camera" parent="CameraPivot"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -5 )
+
+[node name="ObjectDetector" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.029, 0 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="ObjectDetector"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+shape = SubResource( 4 )
+
+[node name="HUD" parent="." instance=ExtResource( 2 )]
+
+[connection signal="body_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_body_entered"]
+[connection signal="body_exited" from="ObjectDetector" to="." method="_on_ObjectDetector_body_exited"]

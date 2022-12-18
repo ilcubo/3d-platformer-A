@@ -8,9 +8,17 @@ export(float) var deceleration
 onready var gravity: float = -ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var velocity: Vector3
-
+var detected_object: Spatial
 var score: int
 
+func _process(_delta) -> void:
+	if detected_object != null:
+		$HUD/Interact.visible = true
+	else:
+		$HUD/Interact.visible = false
+
+	if Input.is_action_just_pressed("interact") and detected_object != null:
+		detected_object.call("_interact", get_path())
 
 func _physics_process(delta: float) -> void:
 	var direction: Vector3 = Vector3.ZERO
@@ -51,7 +59,19 @@ func _physics_process(delta: float) -> void:
 	elif velocity.y < -0.05:
 		$fox/AnimationPlayer.play("Fall")
 
-func _on_ObjectDetector_body_entered(body:Node) -> void:
-	body.call("_collect")
-	score += 1
-	$HUD.call("_update_score", score)
+func collect(body: Spatial):
+	body.call("_collect", get_path())
+
+func _on_ObjectDetector_body_entered(body: Spatial) -> void:
+	if body.get_collision_layer_bit(1):
+		collect(body)
+	elif body.get_collision_layer_bit(2):
+		detected_object = body
+
+func _on_ObjectDetector_body_exited(body: Spatial) -> void:
+	if body.get_collision_layer_bit(2):
+		detected_object = null
+
+func add_score(num: int) -> void:
+	score += num
+	$HUD._update_score(score)

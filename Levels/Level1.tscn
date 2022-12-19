@@ -21,7 +21,6 @@ depth = 50.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
-speed = 20
 acceleration = 0.6
 deceleration = 0.7
 
@@ -61,5 +60,17 @@ one_shot = true
 
 [node name="Position3D" type="Position3D" parent="TimeBasedThing"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.41726, 0.39288, 8.83081 )
+
+[node name="CSGBox2" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.52845, 0, 2.95719 )
+use_collision = true
+
+[node name="CSGBox3" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.729, 1.30447, 2.32371 )
+use_collision = true
+
+[node name="CSGBox4" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4003, 1.92001, 6.16206 )
+depth = 7.17827
 
 [connection signal="timeout" from="TimeBasedThing/Timer" to="TimeBasedThing" method="_on_Timer_timeout"]

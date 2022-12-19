@@ -14,8 +14,8 @@ radius = 0.5
 [node name="Player" type="KinematicBody"]
 collision_mask = 8
 script = ExtResource( 3 )
-speed = 50
-jump_power = 5
+speed = 20
+jump_power = 7
 acceleration = 100.0
 deceleration = 100.0
 

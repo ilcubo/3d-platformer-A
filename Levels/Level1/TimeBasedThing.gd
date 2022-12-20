@@ -15,8 +15,10 @@ func summon() -> void:
 	elif state == 1 and !$Timer.is_stopped():
 		state = 2
 		var new_coin = coin.instance()
+		new_coin.translation = $CoinPosition.translation
 		add_child(new_coin)
 		$Timer.stop()
+		_on_Timer_timeout()
 		
 func _on_Timer_timeout() -> void:
 	var children_nodes = get_children()

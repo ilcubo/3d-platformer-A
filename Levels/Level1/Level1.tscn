@@ -51,6 +51,23 @@ use_collision = true
 collision_layer = 8
 depth = 7.17827
 
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9087, 3.83712, 1.26054 )
+use_collision = true
+collision_layer = 8
+height = 0.50101
+
+[node name="CSGBox5" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9087, 2.29105, -1.56773 )
+use_collision = true
+collision_layer = 8
+height = 5.19515
+
+[node name="CSGBox6" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.431, 4.31334, -2.56304 )
+use_collision = true
+collision_layer = 8
+
 [node name="Coin1" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.5, 0 )
 

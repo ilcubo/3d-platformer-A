@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Items/coin.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Items/Coin.gd" type="Script" id=2]
+[ext_resource path="res://Items/coinmat.tres" type="Material" id=3]
 
 [sub_resource type="SphereShape" id=1]
 radius = 0.5
@@ -56,6 +57,7 @@ shape = SubResource( 1 )
 [node name="coin" type="MeshInstance" parent="."]
 mesh = ExtResource( 1 )
 skeleton = NodePath("../CollisionShape")
+material/0 = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Rotate"

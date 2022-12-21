@@ -11,7 +11,8 @@ var velocity: Vector3
 var detected_object: Spatial
 var score: int
 
-func _process(_delta) -> void:
+# warning-ignore: UNUSED_ARGUMENT
+func _process(delta) -> void:
 	if detected_object != null:
 		$HUD/Interact.visible = true
 	else:
@@ -52,12 +53,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		$fox/AnimationPlayer.play("Idle")
 
-	velocity = move_and_slide(velocity, Vector3.UP)
+	velocity = move_and_slide(velocity, Vector3.UP, true)
 
 	if velocity.y > 0.05:
 		$fox/AnimationPlayer.play("Jump")
-	elif velocity.y < -0.05:
+	elif velocity.y < -0.05 and !is_on_floor():
 		$fox/AnimationPlayer.play("Fall")
+	
+	detect_trap()
 
 func collect(body: Spatial):
 	body.call("_collect", get_path())
@@ -75,3 +78,14 @@ func _on_ObjectDetector_body_exited(body: Spatial) -> void:
 func add_score(num: int) -> void:
 	score += num
 	$HUD._update_score(score)
+
+func detect_trap() -> void:
+	for i in get_slide_count():
+		var collision: KinematicCollision = get_slide_collision(i)
+
+		if !collision.collider is PhysicsBody:
+			break
+
+		if collision.collider.get_collision_layer_bit(5):
+			$HUD/GameOver.visible = true
+			get_tree().paused = true

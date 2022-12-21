@@ -25,3 +25,4 @@ func _on_Timer_timeout() -> void:
 	for child in children_nodes:
 		if child.is_in_group("temp"):
 			remove_child(child)
+			state = 0

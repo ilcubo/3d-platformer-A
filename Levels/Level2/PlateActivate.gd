@@ -1,5 +1,8 @@
 extends Node
 
+
+var coin_summoned: bool = false
+
 var coin_scene: PackedScene = preload("res://Items/Coin.tscn")
 # Declare member variables here. Examples:
 # var a = 2
@@ -16,7 +19,10 @@ func _ready():
 #	pass
 
 #warning-ignore: UNUSED_ARGUMENT
-func _on_PressurePlate_body_entered(body:Node):
+func _on_PressurePlate_body_entered(body:Node) -> void:
+	if coin_summoned:
+		return
+	coin_summoned = true
 	var coin: Spatial = coin_scene.instance()
 	coin.global_translation = $CoinPosition.global_translation
 	add_child(coin)

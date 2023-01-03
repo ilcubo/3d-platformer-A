@@ -1,5 +1,7 @@
 extends KinematicBody
 
+export(int) var hp_max
+
 export(int) var speed
 export(int) var jump_power
 export(float) var acceleration
@@ -7,9 +9,9 @@ export(float) var deceleration
 
 onready var gravity: float = -ProjectSettings.get_setting("physics/3d/default_gravity")
 
+var hp = hp_max
 var velocity: Vector3
 var detected_object: Spatial
-var score: int
 
 # warning-ignore: UNUSED_ARGUMENT
 func _process(delta) -> void:
@@ -59,33 +61,16 @@ func _physics_process(delta: float) -> void:
 		$fox/AnimationPlayer.play("Jump")
 	elif velocity.y < -0.05 and !is_on_floor():
 		$fox/AnimationPlayer.play("Fall")
-	
-	detect_trap()
 
-func collect(body: Spatial):
-	body.call("_collect", get_path())
+func damage(value: int) -> void:
+	hp -= value
+	if hp < 0:
+		hp = 0
 
 func _on_ObjectDetector_body_entered(body: Spatial) -> void:
-	if body.get_collision_layer_bit(1):
-		collect(body)
-	elif body.get_collision_layer_bit(2):
+	if body.get_collision_layer_bit(2):
 		detected_object = body
 
 func _on_ObjectDetector_body_exited(body: Spatial) -> void:
 	if body.get_collision_layer_bit(2):
 		detected_object = null
-
-func add_score(num: int) -> void:
-	score += num
-	$HUD._update_score(score)
-
-func detect_trap() -> void:
-	for i in get_slide_count():
-		var collision: KinematicCollision = get_slide_collision(i)
-
-		if !collision.collider is PhysicsBody:
-			break
-
-		if collision.collider.get_collision_layer_bit(5):
-			$HUD/GameOver.visible = true
-			get_tree().paused = true

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/plantA_desert.obj-188adb5d3af3ba3cc9d91048720f1348.mesh"
+
+[deps]
+
+files=[ "res://.import/plantA_desert.obj-188adb5d3af3ba3cc9d91048720f1348.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/obj/plantA_desert.obj"
+dest_files=[ "res://.import/plantA_desert.obj-188adb5d3af3ba3cc9d91048720f1348.mesh", "res://.import/plantA_desert.obj-188adb5d3af3ba3cc9d91048720f1348.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

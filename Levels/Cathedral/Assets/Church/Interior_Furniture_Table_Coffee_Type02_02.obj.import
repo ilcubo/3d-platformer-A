@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Interior_Furniture_Table_Coffee_Type02_02.obj-aa374d64e7317a109b767f65ef3f8dc5.mesh"
+
+[deps]
+
+files=[ "res://.import/Interior_Furniture_Table_Coffee_Type02_02.obj-aa374d64e7317a109b767f65ef3f8dc5.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/Church/Interior_Furniture_Table_Coffee_Type02_02.obj"
+dest_files=[ "res://.import/Interior_Furniture_Table_Coffee_Type02_02.obj-aa374d64e7317a109b767f65ef3f8dc5.mesh", "res://.import/Interior_Furniture_Table_Coffee_Type02_02.obj-aa374d64e7317a109b767f65ef3f8dc5.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

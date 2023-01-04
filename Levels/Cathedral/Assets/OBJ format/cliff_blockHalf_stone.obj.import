@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cliff_blockHalf_stone.obj-3690357b34991f0d45eb16bbe23cba50.mesh"
+
+[deps]
+
+files=[ "res://.import/cliff_blockHalf_stone.obj-3690357b34991f0d45eb16bbe23cba50.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/OBJ format/cliff_blockHalf_stone.obj"
+dest_files=[ "res://.import/cliff_blockHalf_stone.obj-3690357b34991f0d45eb16bbe23cba50.mesh", "res://.import/cliff_blockHalf_stone.obj-3690357b34991f0d45eb16bbe23cba50.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

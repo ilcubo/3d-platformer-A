@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tileLow_teamRed.obj-0c1096b24b56a4f69de84daa236c66f6.mesh"
+
+[deps]
+
+files=[ "res://.import/tileLow_teamRed.obj-0c1096b24b56a4f69de84daa236c66f6.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/obj/tileLow_teamRed.obj"
+dest_files=[ "res://.import/tileLow_teamRed.obj-0c1096b24b56a4f69de84daa236c66f6.mesh", "res://.import/tileLow_teamRed.obj-0c1096b24b56a4f69de84daa236c66f6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

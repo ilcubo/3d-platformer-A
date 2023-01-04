@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tileLow_desert.obj-d74c2c351e25f63c533026bc0d911587.mesh"
+
+[deps]
+
+files=[ "res://.import/tileLow_desert.obj-d74c2c351e25f63c533026bc0d911587.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/obj/tileLow_desert.obj"
+dest_files=[ "res://.import/tileLow_desert.obj-d74c2c351e25f63c533026bc0d911587.mesh", "res://.import/tileLow_desert.obj-d74c2c351e25f63c533026bc0d911587.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

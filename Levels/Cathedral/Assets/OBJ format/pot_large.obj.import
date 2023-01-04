@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pot_large.obj-77326672420937cf8f7fefa7d0993ad8.mesh"
+
+[deps]
+
+files=[ "res://.import/pot_large.obj-77326672420937cf8f7fefa7d0993ad8.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/OBJ format/pot_large.obj"
+dest_files=[ "res://.import/pot_large.obj-77326672420937cf8f7fefa7d0993ad8.mesh", "res://.import/pot_large.obj-77326672420937cf8f7fefa7d0993ad8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

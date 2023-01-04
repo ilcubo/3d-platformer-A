@@ -1,6 +1,7 @@
 class_name Player
 extends KinematicBody
 
+
 export(int) var hp_max
 
 export(int) var speed
@@ -13,6 +14,7 @@ onready var gravity: float = -ProjectSettings.get_setting("physics/3d/default_gr
 var hp = hp_max
 var velocity: Vector3
 var detected_object: Spatial
+
 
 # warning-ignore: UNUSED_ARGUMENT
 func _process(delta) -> void:
@@ -83,4 +85,12 @@ func _on_ObjectDetector_body_entered(body: Spatial) -> void:
 
 func _on_ObjectDetector_body_exited(body: Spatial) -> void:
 	if body.get_collision_layer_bit(2):
+		detected_object = null
+
+func _on_ObjectDetector_area_entered(area:Area):
+	if area.get_collision_layer_bit(2):
+		detected_object = area
+
+func _on_ObjectDetector_area_exited(area:Area):
+	if area.get_collision_layer_bit(2):
 		detected_object = null

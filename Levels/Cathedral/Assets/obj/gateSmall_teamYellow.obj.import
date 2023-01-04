@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/gateSmall_teamYellow.obj-0def550e594f6075f801f090f72ad745.mesh"
+
+[deps]
+
+files=[ "res://.import/gateSmall_teamYellow.obj-0def550e594f6075f801f090f72ad745.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/obj/gateSmall_teamYellow.obj"
+dest_files=[ "res://.import/gateSmall_teamYellow.obj-0def550e594f6075f801f090f72ad745.mesh", "res://.import/gateSmall_teamYellow.obj-0def550e594f6075f801f090f72ad745.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

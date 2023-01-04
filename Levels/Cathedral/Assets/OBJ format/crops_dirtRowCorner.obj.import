@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/crops_dirtRowCorner.obj-b792efea0059cd95eb3935c2a2d51569.mesh"
+
+[deps]
+
+files=[ "res://.import/crops_dirtRowCorner.obj-b792efea0059cd95eb3935c2a2d51569.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/OBJ format/crops_dirtRowCorner.obj"
+dest_files=[ "res://.import/crops_dirtRowCorner.obj-b792efea0059cd95eb3935c2a2d51569.mesh", "res://.import/crops_dirtRowCorner.obj-b792efea0059cd95eb3935c2a2d51569.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

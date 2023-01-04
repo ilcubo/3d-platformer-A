@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/slingshot_teamYellow.obj-622b1f044d457b87e721e9bd18945c66.mesh"
+
+[deps]
+
+files=[ "res://.import/slingshot_teamYellow.obj-622b1f044d457b87e721e9bd18945c66.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/obj/slingshot_teamYellow.obj"
+dest_files=[ "res://.import/slingshot_teamYellow.obj-622b1f044d457b87e721e9bd18945c66.mesh", "res://.import/slingshot_teamYellow.obj-622b1f044d457b87e721e9bd18945c66.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

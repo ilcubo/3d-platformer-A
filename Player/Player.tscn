@@ -45,5 +45,7 @@ shape = SubResource( 4 )
 
 [node name="HUD" parent="." instance=ExtResource( 2 )]
 
+[connection signal="area_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_area_entered"]
+[connection signal="area_exited" from="ObjectDetector" to="." method="_on_ObjectDetector_area_exited"]
 [connection signal="body_entered" from="ObjectDetector" to="." method="_on_ObjectDetector_body_entered"]
 [connection signal="body_exited" from="ObjectDetector" to="." method="_on_ObjectDetector_body_exited"]

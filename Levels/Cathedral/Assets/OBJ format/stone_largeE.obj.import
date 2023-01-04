@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/stone_largeE.obj-8904c87977fbdce47d3abf45c3e4d2eb.mesh"
+
+[deps]
+
+files=[ "res://.import/stone_largeE.obj-8904c87977fbdce47d3abf45c3e4d2eb.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/OBJ format/stone_largeE.obj"
+dest_files=[ "res://.import/stone_largeE.obj-8904c87977fbdce47d3abf45c3e4d2eb.mesh", "res://.import/stone_largeE.obj-8904c87977fbdce47d3abf45c3e4d2eb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tileSlopeLowHigh_forest.obj-cb3b5a63c58736604fc9b53300b098ff.mesh"
+
+[deps]
+
+files=[ "res://.import/tileSlopeLowHigh_forest.obj-cb3b5a63c58736604fc9b53300b098ff.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/obj/tileSlopeLowHigh_forest.obj"
+dest_files=[ "res://.import/tileSlopeLowHigh_forest.obj-cb3b5a63c58736604fc9b53300b098ff.mesh", "res://.import/tileSlopeLowHigh_forest.obj-cb3b5a63c58736604fc9b53300b098ff.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

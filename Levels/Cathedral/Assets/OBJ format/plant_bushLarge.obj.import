@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/plant_bushLarge.obj-2789fc96290a60bd1708d0aa6919bc31.mesh"
+
+[deps]
+
+files=[ "res://.import/plant_bushLarge.obj-2789fc96290a60bd1708d0aa6919bc31.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/OBJ format/plant_bushLarge.obj"
+dest_files=[ "res://.import/plant_bushLarge.obj-2789fc96290a60bd1708d0aa6919bc31.mesh", "res://.import/plant_bushLarge.obj-2789fc96290a60bd1708d0aa6919bc31.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

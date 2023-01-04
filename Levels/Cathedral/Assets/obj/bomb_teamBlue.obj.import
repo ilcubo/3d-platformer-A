@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bomb_teamBlue.obj-f5a10440aa8a3b204b3cb69f8d83126a.mesh"
+
+[deps]
+
+files=[ "res://.import/bomb_teamBlue.obj-f5a10440aa8a3b204b3cb69f8d83126a.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/obj/bomb_teamBlue.obj"
+dest_files=[ "res://.import/bomb_teamBlue.obj-f5a10440aa8a3b204b3cb69f8d83126a.mesh", "res://.import/bomb_teamBlue.obj-f5a10440aa8a3b204b3cb69f8d83126a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

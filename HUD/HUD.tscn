@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
-[ext_resource path="res://HUD/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://Screens/GameOver/GameOver.tscn" type="PackedScene" id=2]
 [ext_resource path="res://HUD/PauseMenu.gd" type="Script" id=3]
 
 [node name="HUD" type="Control"]
@@ -9,13 +9,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="ScoreLabel" type="Label" parent="."]
+[node name="HpLabel" type="Label" parent="."]
 margin_right = 40.0
 margin_bottom = 14.0
-custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "0"
+text = "5"
 
 [node name="Interact" type="Label" parent="."]
 visible = false
@@ -56,27 +53,4 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Paused"
 align = 1
 
-[node name="GameOver" type="Control" parent="."]
-pause_mode = 2
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 2 )
-
-[node name="ColorRect" type="ColorRect" parent="GameOver"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0, 0, 1 )
-
-[node name="Label" type="Label" parent="GameOver"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -7.0
-margin_right = 20.0
-margin_bottom = 7.0
-custom_colors/font_color = Color( 1, 0, 0, 1 )
-text = "Game Over"
-align = 1
+[node name="GameOver" parent="." instance=ExtResource( 2 )]

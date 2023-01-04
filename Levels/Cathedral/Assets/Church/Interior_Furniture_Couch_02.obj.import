@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Interior_Furniture_Couch_02.obj-eacf101791c1c765a90bf8e3c2b8e49f.mesh"
+
+[deps]
+
+files=[ "res://.import/Interior_Furniture_Couch_02.obj-eacf101791c1c765a90bf8e3c2b8e49f.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/Church/Interior_Furniture_Couch_02.obj"
+dest_files=[ "res://.import/Interior_Furniture_Couch_02.obj-eacf101791c1c765a90bf8e3c2b8e49f.mesh", "res://.import/Interior_Furniture_Couch_02.obj-eacf101791c1c765a90bf8e3c2b8e49f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

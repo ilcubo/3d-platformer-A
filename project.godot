@@ -9,19 +9,19 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "StaticBody",
-"class": "Coin",
-"language": "GDScript",
-"path": "res://Items/Coin.gd"
-}, {
 "base": "EditorVCSInterface",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
+"base": "KinematicBody",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Player/Player.gd"
 } ]
 _global_script_class_icons={
-"Coin": "",
-"GitAPI": ""
+"GitAPI": "",
+"Player": ""
 }
 
 [application]

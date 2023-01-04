@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bow_teamBlue.obj-8c21b8d3dff0aba0163ed5d8a0aa805b.mesh"
+
+[deps]
+
+files=[ "res://.import/bow_teamBlue.obj-8c21b8d3dff0aba0163ed5d8a0aa805b.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/obj/bow_teamBlue.obj"
+dest_files=[ "res://.import/bow_teamBlue.obj-8c21b8d3dff0aba0163ed5d8a0aa805b.mesh", "res://.import/bow_teamBlue.obj-8c21b8d3dff0aba0163ed5d8a0aa805b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cliff_top_rock.obj-651a9357e8f8189c550ec611554b44ac.mesh"
+
+[deps]
+
+files=[ "res://.import/cliff_top_rock.obj-651a9357e8f8189c550ec611554b44ac.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/OBJ format/cliff_top_rock.obj"
+dest_files=[ "res://.import/cliff_top_rock.obj-651a9357e8f8189c550ec611554b44ac.mesh", "res://.import/cliff_top_rock.obj-651a9357e8f8189c550ec611554b44ac.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

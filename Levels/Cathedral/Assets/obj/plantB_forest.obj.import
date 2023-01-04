@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/plantB_forest.obj-ccaddafaf39b4c2ea557424fce94660a.mesh"
+
+[deps]
+
+files=[ "res://.import/plantB_forest.obj-ccaddafaf39b4c2ea557424fce94660a.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/obj/plantB_forest.obj"
+dest_files=[ "res://.import/plantB_forest.obj-ccaddafaf39b4c2ea557424fce94660a.mesh", "res://.import/plantB_forest.obj-ccaddafaf39b4c2ea557424fce94660a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

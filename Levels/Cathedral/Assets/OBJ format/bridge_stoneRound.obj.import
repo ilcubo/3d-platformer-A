@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bridge_stoneRound.obj-eff7b9a3c189c5e1c1dd9e49efd7e0fc.mesh"
+
+[deps]
+
+files=[ "res://.import/bridge_stoneRound.obj-eff7b9a3c189c5e1c1dd9e49efd7e0fc.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/OBJ format/bridge_stoneRound.obj"
+dest_files=[ "res://.import/bridge_stoneRound.obj-eff7b9a3c189c5e1c1dd9e49efd7e0fc.mesh", "res://.import/bridge_stoneRound.obj-eff7b9a3c189c5e1c1dd9e49efd7e0fc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/characer_duck.obj-ecdfab7a9a79270b6d7cdf28f2a0a157.mesh"
+
+[deps]
+
+files=[ "res://.import/characer_duck.obj-ecdfab7a9a79270b6d7cdf28f2a0a157.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/obj/characer_duck.obj"
+dest_files=[ "res://.import/characer_duck.obj-ecdfab7a9a79270b6d7cdf28f2a0a157.mesh", "res://.import/characer_duck.obj-ecdfab7a9a79270b6d7cdf28f2a0a157.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

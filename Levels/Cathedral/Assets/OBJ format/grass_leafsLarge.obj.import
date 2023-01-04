@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/grass_leafsLarge.obj-769035072e7338e6590d39cc0fabb250.mesh"
+
+[deps]
+
+files=[ "res://.import/grass_leafsLarge.obj-769035072e7338e6590d39cc0fabb250.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/OBJ format/grass_leafsLarge.obj"
+dest_files=[ "res://.import/grass_leafsLarge.obj-769035072e7338e6590d39cc0fabb250.mesh", "res://.import/grass_leafsLarge.obj-769035072e7338e6590d39cc0fabb250.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

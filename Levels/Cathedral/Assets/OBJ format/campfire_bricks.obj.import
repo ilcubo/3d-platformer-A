@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/campfire_bricks.obj-48fcbea320c7eb0f4c3555257bd7ebcd.mesh"
+
+[deps]
+
+files=[ "res://.import/campfire_bricks.obj-48fcbea320c7eb0f4c3555257bd7ebcd.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/OBJ format/campfire_bricks.obj"
+dest_files=[ "res://.import/campfire_bricks.obj-48fcbea320c7eb0f4c3555257bd7ebcd.mesh", "res://.import/campfire_bricks.obj-48fcbea320c7eb0f4c3555257bd7ebcd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

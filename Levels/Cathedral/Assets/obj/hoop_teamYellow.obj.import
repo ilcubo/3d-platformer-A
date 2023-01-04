@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hoop_teamYellow.obj-18c2b53804e82adb8d6b27fa32905ea0.mesh"
+
+[deps]
+
+files=[ "res://.import/hoop_teamYellow.obj-18c2b53804e82adb8d6b27fa32905ea0.mesh" ]
+
+source_file="res://Levels/Cathedral/Assets/obj/hoop_teamYellow.obj"
+dest_files=[ "res://.import/hoop_teamYellow.obj-18c2b53804e82adb8d6b27fa32905ea0.mesh", "res://.import/hoop_teamYellow.obj-18c2b53804e82adb8d6b27fa32905ea0.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

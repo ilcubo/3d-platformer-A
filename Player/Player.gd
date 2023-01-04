@@ -1,3 +1,4 @@
+class_name Player
 extends KinematicBody
 
 export(int) var hp_max
@@ -66,6 +67,15 @@ func damage(value: int) -> void:
 	hp -= value
 	if hp < 0:
 		hp = 0
+
+	$HUD._update_hp(hp)
+
+	if hp == 0:
+		die()
+
+func die() -> void:
+	# warning-ignore: RETURN_VALUE_DISCARDED
+	get_tree().change_scene("res://Screens/GameOver")
 
 func _on_ObjectDetector_body_entered(body: Spatial) -> void:
 	if body.get_collision_layer_bit(2):

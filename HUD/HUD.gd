@@ -1,5 +1,5 @@
 extends Control
 
 
-func _update_score(score: int) -> void:
-	$ScoreLabel.text = "{score}".format({"score": score})
+func _update_hp(value: int) -> void:
+	$HpLabel.text = "{value}".format({"value": value})

@@ -1,6 +1,14 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://EnemyBase.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/EnemyBase.gd" type="Script" id=1]
 
 [node name="EnemyBase" type="KinematicBody"]
 script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

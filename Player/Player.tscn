@@ -33,6 +33,7 @@ max_angle = 70.0
 
 [node name="Camera" type="Camera" parent="CameraPivot"]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -5 )
+current = true
 
 [node name="ObjectDetector" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.029, 0 )

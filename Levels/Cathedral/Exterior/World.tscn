@@ -1,11 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Levels/Cathedral/Tilesets/Tileset6 Church.tres" type="MeshLibrary" id=1]
-[ext_resource path="res://Levels/Cathedral/Cathedral.glb" type="PackedScene" id=2]
+[ext_resource path="res://Levels/Cathedral/Cathedral.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/Cathedral/Exterior/World.gd" type="Script" id=3]
+[ext_resource path="res://Levels/WarpPortal.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CubeMesh" id=1]
 
+[sub_resource type="BoxShape" id=2]
+
 [node name="World" type="Spatial"]
+script = ExtResource( 3 )
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00633144, -0.14639, 0.107442 )
@@ -23,8 +28,21 @@ __meta__ = {
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.03502, 0.378332 )
 mesh = SubResource( 1 )
 
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.970532, -0.240973, 0, 0.240973, 0.970532, 0, 6.59907, 39.0249 )
+visible = false
+
 [node name="Cathedral" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3764, -0.470411, -83.7437 )
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.970532, -0.240973, 0, 0.240973, 0.970532, 0, 6.59907, 39.0249 )
+[node name="Spawn" type="Node" parent="."]
+
+[node name="Default" type="Position3D" parent="Spawn"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25028, 0 )
+
+[node name="WarpPortal" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.78877, 4.33861, -17.8914 )
+target_scene = "res://Levels/Cathedral/Interior/Inside.tscn"
+
+[node name="CollisionShape" type="CollisionShape" parent="WarpPortal"]
+shape = SubResource( 2 )

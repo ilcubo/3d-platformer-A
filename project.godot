@@ -29,6 +29,10 @@ _global_script_class_icons={
 config/name="Platformer3D"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global/Global.gd"
+
 [editor]
 
 version_control_autoload_on_startup=true

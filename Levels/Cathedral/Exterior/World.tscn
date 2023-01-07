@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Levels/Cathedral/Tilesets/Tileset6 Church.tres" type="MeshLibrary" id=1]
+[ext_resource path="res://Levels/Cathedral/Tilesets/TilesetA.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://Levels/Cathedral/Cathedral.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/Cathedral/Exterior/World.gd" type="Script" id=3]
 [ext_resource path="res://Levels/WarpPortal.tscn" type="PackedScene" id=4]

@@ -11,13 +11,17 @@ export(float) var deceleration
 
 onready var gravity: float = -ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var hp = hp_max
+var hp: int
 var velocity: Vector3
 var detected_object: Spatial
 
 
+func _ready() -> void:
+	hp = hp_max
+
+
 # warning-ignore: UNUSED_ARGUMENT
-func _process(delta) -> void:
+func _process(delta: float) -> void:
 	if detected_object != null:
 		$HUD/Interact.visible = true
 	else:
@@ -66,10 +70,13 @@ func _physics_process(delta: float) -> void:
 		$fox/AnimationPlayer.play("Fall")
 
 func damage(value: int) -> void:
+	print(hp)
+	print(value)
 	hp -= value
 	if hp < 0:
 		hp = 0
 
+	print(hp)
 	$HUD._update_hp(hp)
 
 	if hp == 0:
@@ -77,7 +84,7 @@ func damage(value: int) -> void:
 
 func die() -> void:
 	# warning-ignore: RETURN_VALUE_DISCARDED
-	get_tree().change_scene("res://Screens/GameOver")
+	get_tree().change_scene("res://Screens/GameOver/GameOver.tscn")
 
 func _on_ObjectDetector_body_entered(body: Spatial) -> void:
 	if body.get_collision_layer_bit(2):

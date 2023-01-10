@@ -6,14 +6,15 @@ export(float) var max_angle
 
 var mouse_movement: Vector2 = Vector2.ZERO
 
-func _ready():
+func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func _input(event):
+func _input(event) -> void:
 	if event is InputEventMouseMotion:
 		mouse_movement = event.relative
 
-func _process(delta):
+# warning-ignore: UNUSED_ARGUMENT
+func _process(delta: float) -> void:
 	var rot = Vector3(mouse_movement.y, mouse_movement.x, 0) * sensitivity * delta
 
 	rotation_degrees.x += rot.x

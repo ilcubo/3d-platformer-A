@@ -10,6 +10,7 @@ height = 0.721725
 [sub_resource type="BoxShape" id=2]
 
 [node name="TestEnemy" instance=ExtResource( 1 )]
+hp = 2
 
 [node name="CollisionShape" parent="." index="0"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.828189, 0 )

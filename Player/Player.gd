@@ -77,13 +77,10 @@ func _physics_process(delta: float) -> void:
 			enemy.call("_damage", attack_damage)
 
 func damage(value: int) -> void:
-	print(hp)
-	print(value)
 	hp -= value
 	if hp < 0:
 		hp = 0
 
-	print(hp)
 	$HUD._update_hp(hp)
 
 	if hp == 0:

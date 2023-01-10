@@ -9,5 +9,7 @@ func _ready():
 		Global.spawn_pos = "Spawn/Default"
 
 	var player: Spatial = player_scene.instance()
-	player.global_translation = get_node(Global.spawn_pos).global_translation
+	player.translation = get_node(Global.spawn_pos).translation
+	player.get_node("fox").rotation.y = get_node(Global.spawn_pos).rotation.y
+	player.get_node("CameraPivot").rotation.y = get_node(Global.spawn_pos).rotation.y
 	add_child(player)

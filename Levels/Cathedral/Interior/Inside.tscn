@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Levels/Cathedral/Tilesets/Tileset3.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://Levels/Cathedral/PavingStones129_1K_Roughness.png" type="Texture" id=2]
 [ext_resource path="res://Levels/Cathedral/Interior/Inside.gd" type="Script" id=3]
+[ext_resource path="res://Levels/WarpPortal.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -20,6 +21,9 @@ uv1_scale = Vector3( 25, 25, 25 )
 data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
 
 [sub_resource type="SphereMesh" id=5]
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 6.90806, 3.76122, 0.843357 )
 
 [node name="Inside" type="Spatial"]
 script = ExtResource( 3 )
@@ -59,4 +63,13 @@ mesh = SubResource( 5 )
 [node name="Spawn" type="Node" parent="."]
 
 [node name="Default" type="Position3D" parent="Spawn"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.80752, 10.5406 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 3.80752, 10.5406 )
+
+[node name="WarpPortal" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24.9007 )
+target_scene = "res://Levels/Cathedral/Exterior/World.tscn"
+target_spawn_pos = "Spawn/Door"
+
+[node name="CollisionShape" type="CollisionShape" parent="WarpPortal"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.29133, 0 )
+shape = SubResource( 7 )

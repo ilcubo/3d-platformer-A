@@ -12,6 +12,11 @@ func _ready() -> void:
 func _input(event) -> void:
 	if event is InputEventMouseMotion:
 		mouse_movement = event.relative
+	if event is InputEventJoypadMotion:
+		if Input.get_joy_axis(0, JOY_AXIS_2) >= 0.1 or Input.get_joy_axis(0, JOY_AXIS_2) <= -0.1:
+			mouse_movement.x = Input.get_joy_axis(0, JOY_AXIS_2) * 20
+		if Input.get_joy_axis(0, JOY_AXIS_3) >= 0.1 or Input.get_joy_axis(0, JOY_AXIS_2) <= -0.1:
+			mouse_movement.y = Input.get_joy_axis(0, JOY_AXIS_3) * 20
 
 # warning-ignore: UNUSED_ARGUMENT
 func _process(delta: float) -> void:

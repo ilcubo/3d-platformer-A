@@ -102,6 +102,7 @@ attack={
 3d_physics/layer_5="Box"
 3d_physics/layer_6="DeathTrap"
 3d_physics/layer_7="Enemy"
+3d_physics/layer_8="Bullets"
 
 [physics]
 

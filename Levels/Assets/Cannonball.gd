@@ -22,6 +22,8 @@ func _on_Timer_timeout():
 
 # warning-ignore: UNUSED_ARGUMENT
 func _on_Cannonball_body_entered(body: Node):
-	$ExplosionArea.visible = true
-	yield(get_tree().create_timer(1.0), "timeout")
+	$ExplosionArea.monitoring = true
+	$MeshInstance.queue_free()
+	$CollisionShape.queue_free()
+	yield(get_tree().create_timer(0.2), "timeout")
 	queue_free()

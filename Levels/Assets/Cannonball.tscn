@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Levels/Assets/Cannonball.gd" type="Script" id=1]
 [ext_resource path="res://Levels/Assets/ExplosionArea.gd" type="Script" id=2]
@@ -16,18 +16,6 @@ radius = 0.41
 
 [sub_resource type="SphereShape" id=4]
 radius = 2.0
-
-[sub_resource type="ParticlesMaterial" id=5]
-emission_shape = 1
-emission_sphere_radius = 1.0
-gravity = Vector3( 0, 0, 0 )
-radial_accel = 5.0
-scale = 2.0
-color = Color( 0.956863, 0.494118, 0.0862745, 1 )
-
-[sub_resource type="SphereMesh" id=6]
-radius = 0.01
-height = 0.02
 
 [node name="Cannonball" type="RigidBody"]
 collision_layer = 128
@@ -55,12 +43,6 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ExplosionArea"]
 shape = SubResource( 4 )
-
-[node name="Particles" type="Particles" parent="."]
-emitting = false
-amount = 1000
-process_material = SubResource( 5 )
-draw_pass_1 = SubResource( 6 )
 
 [connection signal="body_entered" from="." to="." method="_on_Cannonball_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

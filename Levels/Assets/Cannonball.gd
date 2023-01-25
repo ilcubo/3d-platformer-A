@@ -22,6 +22,7 @@ func _on_Timer_timeout():
 
 # warning-ignore: UNUSED_ARGUMENT
 func _on_Cannonball_body_entered(body: Node):
+	sleeping = true
 	$ExplosionArea.monitoring = true
 	$MeshInstance.queue_free()
 	$CollisionShape.queue_free()

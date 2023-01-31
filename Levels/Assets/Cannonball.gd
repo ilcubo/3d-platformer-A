@@ -16,15 +16,25 @@ func _physics_process(delta: float) -> void:
 	pass
 
 
-func _on_Timer_timeout():
+func _on_Timer_timeout() -> void:
 	queue_free()
 
 
 # warning-ignore: UNUSED_ARGUMENT
-func _on_Cannonball_body_entered(body: Node):
+func _on_Cannonball_body_entered(body: Node) -> void:
 	sleeping = true
+	linear_velocity = Vector3.ZERO
+	angular_velocity = Vector3.ZERO
+
+	if has_node("MeshInstance"):
+		$MeshInstance.queue_free()
+
+	if has_node("CollisionShape"):
+		$CollisionShape.queue_free()
+
 	$ExplosionArea.monitoring = true
-	$MeshInstance.queue_free()
-	$CollisionShape.queue_free()
-	yield(get_tree().create_timer(0.2), "timeout")
+	$Particles.emitting = true
+	yield(get_tree().create_timer(0.1), "timeout")
+	$Particles2.emitting = true
+	yield(get_tree().create_timer(2), "timeout")
 	queue_free()

@@ -8,7 +8,3 @@ func _ready():
 	var player: Spatial = player_scene.instance()
 	player.translation = $PlayerSpawn.translation
 	add_child(player)
-	print(player.speed)
-
-
-

@@ -63,11 +63,6 @@ mesh = SubResource( 2 )
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 3 )
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 20.0
-one_shot = true
-autostart = true
-
 [node name="ExplosionArea" type="Area" parent="."]
 collision_layer = 128
 monitoring = false
@@ -94,5 +89,4 @@ process_material = SubResource( 8 )
 draw_pass_1 = SubResource( 10 )
 
 [connection signal="body_entered" from="." to="." method="_on_Cannonball_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="ExplosionArea" to="ExplosionArea" method="_on_ExplosionArea_body_entered"]

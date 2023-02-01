@@ -38,9 +38,9 @@ size = Vector3( 0.3, 0.3, 0.3 )
 
 [sub_resource type="ParticlesMaterial" id=8]
 emission_shape = 1
-emission_sphere_radius = 1.0
-gravity = Vector3( 0, -0.1, 0 )
-radial_accel = 15.0
+emission_sphere_radius = 1.7
+gravity = Vector3( 0, 5, 0 )
+radial_accel = 10.0
 
 [sub_resource type="SpatialMaterial" id=9]
 albedo_color = Color( 0.176471, 0.176471, 0.176471, 1 )
@@ -87,9 +87,9 @@ draw_pass_1 = SubResource( 7 )
 
 [node name="Particles2" type="Particles" parent="."]
 emitting = false
-amount = 500
+amount = 200
 one_shot = true
-explosiveness = 0.6
+explosiveness = 0.2
 process_material = SubResource( 8 )
 draw_pass_1 = SubResource( 10 )
 

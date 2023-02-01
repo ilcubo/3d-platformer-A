@@ -73,3 +73,19 @@ target_spawn_pos = "Spawn/Door"
 [node name="CollisionShape" type="CollisionShape" parent="WarpPortal"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.29133, 0 )
 shape = SubResource( 7 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.44935, 0.893356, 0, -0.893356, -0.44935, 0, 14.0062, -28.0939 )
+light_energy = 5.0
+shadow_enabled = true
+spot_range = 55.1995
+
+[node name="SpotLight2" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.0262468, 0.999655, 0, -0.999655, -0.0262468, -16.8393, 18.3054, 13.4909 )
+shadow_enabled = true
+spot_range = 50.6481
+
+[node name="SpotLight3" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.0262468, 0.999655, 0, -0.999655, -0.0262468, 18.1948, 18.3054, 13.4909 )
+shadow_enabled = true
+spot_range = 50.6481

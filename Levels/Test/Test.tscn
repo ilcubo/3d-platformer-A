@@ -46,5 +46,5 @@ transform = Transform( 0.926561, -0.376143, 0, -0.0709271, -0.174716, 0.982061, 
 spot_range = 9.23406
 
 [node name="OmniLight" type="OmniLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.883672, 0.28474, 4.25745 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.883672, 0.885152, 4.25745 )
 light_color = Color( 0.286275, 0.92549, 0.580392, 1 )

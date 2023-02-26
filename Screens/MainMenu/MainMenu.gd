@@ -10,5 +10,4 @@ extends Control
 # warning-ignore: UNUSED_ARGUMENT
 func _process(delta) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		# warning-ignore: RETURN_VALUE_DISCARDED
-		get_tree().change_scene("res://Levels/Hub/Hub.tscn")
+		SceneTransition.change_scene("res://Levels/Hub/Hub.tscn")

@@ -3,7 +3,8 @@
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Screens/GameOver/GameOver.tscn" type="PackedScene" id=2]
 [ext_resource path="res://HUD/PauseMenu.gd" type="Script" id=3]
-[ext_resource path="res://standard.tres" type="Theme" id=4]
+[ext_resource path="res://Theme/standard.tres" type="Theme" id=4]
+
 
 [node name="HUD" type="Control"]
 anchor_right = 1.0

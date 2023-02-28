@@ -40,6 +40,27 @@ func _physics_process(delta: float) -> void:
 	direction.z = Input.get_action_strength("move_forward") - Input.get_action_strength("move_backward")
 	direction = direction.normalized().rotated(Vector3.UP, $CameraPivot.rotation.y)
 	
+	move(direction, delta)
+
+	if direction != Vector3.ZERO:
+		$fox/AnimationPlayer.play("Run")
+		$fox.rotation.y = lerp($fox.rotation.y, atan2(velocity.x, velocity.z), 0.7)
+	else:
+		$fox/AnimationPlayer.play("Idle")
+
+	if velocity.y > 0.05:
+		$fox/AnimationPlayer.play("Jump")
+	elif velocity.y < -0.05 and !is_on_floor():
+		$fox/AnimationPlayer.play("Fall")
+
+	# Attack
+	if Input.is_action_just_pressed("attack"):
+		var enemies = $fox/Hitbox.get_overlapping_bodies()
+		for enemy in enemies:
+			enemy.call("_damage", attack_damage)
+
+
+func move(direction: Vector3, delta: float):
 	var velocity_h: Vector3 = velocity
 	velocity_h.y = 0
 	
@@ -59,23 +80,6 @@ func _physics_process(delta: float) -> void:
 
 	velocity = move_and_slide(velocity, Vector3.UP, true)
 
-	if direction != Vector3.ZERO:
-		$fox/AnimationPlayer.play("Run")
-		$fox.rotation.y = lerp($fox.rotation.y, atan2(velocity.x, velocity.z), 0.7)
-	else:
-		$fox/AnimationPlayer.play("Idle")
-
-	if velocity.y > 0.05:
-		$fox/AnimationPlayer.play("Jump")
-	elif velocity.y < -0.05 and !is_on_floor():
-		$fox/AnimationPlayer.play("Fall")
-
-	# Attack
-	if Input.is_action_just_pressed("attack"):
-		var enemies = $fox/Hitbox.get_overlapping_bodies()
-		for enemy in enemies:
-			enemy.call("_damage", attack_damage)
-
 func damage(value: int) -> void:
 	hp -= value
 	if hp < 0:
@@ -93,6 +97,7 @@ func die() -> void:
 func heal(value: int) -> void:
 	hp += value
 	$HUD._update_hp(hp)
+
 
 func _on_ObjectDetector_body_entered(body: Spatial) -> void:
 	if body.get_collision_layer_bit(2):

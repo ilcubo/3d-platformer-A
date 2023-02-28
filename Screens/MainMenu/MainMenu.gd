@@ -5,6 +5,8 @@ extends Control
 # var a = 2
 # var b = "text"
 
+func _ready():
+	SceneTransition.current_scene = self
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 # warning-ignore: UNUSED_ARGUMENT

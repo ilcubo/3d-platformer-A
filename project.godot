@@ -27,11 +27,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Platformer3D"
+run/main_scene="res://Screens/MainMenu/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Global="*res://Global/Global.gd"
+SceneTransition="*res://Screens/SceneTransition/SceneTransition.tscn"
 
 [editor]
 

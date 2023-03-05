@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/038 Wooden Fence.obj-1e70bc63dbd13306912e8448d9366389.mesh"
+
+[deps]
+
+files=[ "res://.import/038 Wooden Fence.obj-1e70bc63dbd13306912e8448d9366389.mesh" ]
+
+source_file="res://Assets/DetailLayers/Fences/038 Wooden Fence.obj"
+dest_files=[ "res://.import/038 Wooden Fence.obj-1e70bc63dbd13306912e8448d9366389.mesh", "res://.import/038 Wooden Fence.obj-1e70bc63dbd13306912e8448d9366389.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

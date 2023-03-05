@@ -1,0 +1,9 @@
+{
+	"contains_albedo": false,
+	"resolution": 1024,
+	"src": {
+		"a": "res://Assets/Materials/Sand 2k/Ground054_2K_Roughness.jpg",
+		"normalmap_flip_y": true,
+		"rgb": "res://Assets/Materials/Sand 2k/Ground054_2K_NormalDX.jpg"
+	}
+}
